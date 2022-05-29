@@ -1,11 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter_dio_example/models/models.dart';
+import 'package:flutter_dio_example/network/interceptors/interceptors.dart';
 import 'package:flutter_dio_example/network/network.dart';
-
-// ignore: constant_identifier_names
-const String API_KEY =
-    'cdc9a8ca8aa17b6bed3aa3611a835105bbb4632514d7ca8cf55dbbc5966a7cae';
 
 class DioClient {
   DioClient()
@@ -16,7 +13,10 @@ class DioClient {
             receiveTimeout: Endpoints.receiveTimeout,
             responseType: ResponseType.json,
           ),
-        );
+        )..interceptors.addAll([
+            AuthorizationInterceptor(),
+            LoggerInterceptor(),
+          ]);
 
   late final Dio _dio;
 
@@ -35,13 +35,7 @@ class DioClient {
 
   Future<User?> createUser({required User user}) async {
     try {
-      final response = await _dio.post(
-        Endpoints.users,
-        data: user.toJson(),
-        options: Options(
-          headers: {'Authorization': 'Bearer $API_KEY'},
-        ),
-      );
+      final response = await _dio.post(Endpoints.users, data: user.toJson());
       return User.fromJson(response.data);
     } on DioError catch (err) {
       final errorMessage = DioException.fromDioError(err);
@@ -54,12 +48,7 @@ class DioClient {
 
   Future<void> deleteUser({required int id}) async {
     try {
-      await _dio.delete(
-        '${Endpoints.users}/$id',
-        options: Options(
-          headers: {'Authorization': 'Bearer $API_KEY'},
-        ),
-      );
+      await _dio.delete('${Endpoints.users}/$id');
     } on DioError catch (err) {
       final errorMessage = DioException.fromDioError(err);
       throw errorMessage;
