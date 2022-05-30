@@ -1,16 +1,27 @@
-# flutter_dio_example
+# Flutter Dio Example
 
-A new Flutter project.
+[Dio](https://pub.dev/packages/dio) Package in Flutter - HTTP Requests and Interceptors. Learn how to use Flutter Dio package to make http requests, deal with interceptors and take care of unexpected server responses and failures in Flutter apps.
+
+This project shows - 
+- how to work with code generation libraries to create robust model classes.
+- how to initialise dio package.
+- how to make http requests using dio package.
+- how to handle server errors and network issues using custom exception handler.
+- how to work with interceptors and logger for better logging purposes.
+- how to connect UI using FutureBuilder for asynchronous methods.
+
+<!-- ### Read the article [here on Medium](https://medium.com/@thecodexhubofficial/flutter-sqlite-database-persist-data-with-sqflite-74283c51b9a2).
+
+### Check the sample video [here on Instagram](https://www.instagram.com/p/CXwDnyZjyGx/?utm_source=ig_web_copy_link). -->
+
+## Preview
+
+<img src="screenshots/thumbnail.png" />
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### If you like this repository, kindly give it a star ⭐
