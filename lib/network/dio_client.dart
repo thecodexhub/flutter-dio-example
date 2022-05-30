@@ -38,7 +38,7 @@ class DioClient {
       final response = await _dio.post(Endpoints.users, data: user.toJson());
       return User.fromJson(response.data);
     } on DioError catch (err) {
-      final errorMessage = DioException.fromDioError(err);
+      final errorMessage = DioException.fromDioError(err).toString();
       throw errorMessage;
     } catch (e) {
       if (kDebugMode) print(e);
@@ -50,7 +50,7 @@ class DioClient {
     try {
       await _dio.delete('${Endpoints.users}/$id');
     } on DioError catch (err) {
-      final errorMessage = DioException.fromDioError(err);
+      final errorMessage = DioException.fromDioError(err).toString();
       throw errorMessage;
     } catch (e) {
       if (kDebugMode) print(e);
