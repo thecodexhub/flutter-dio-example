@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_dio_example/extensions/extensions.dart';
 import 'package:flutter_dio_example/models/models.dart';
@@ -119,7 +117,7 @@ class _POSTMethodTileState extends State<POSTMethodTile> {
               flex: 3,
               child: DataInputField(
                 controller: _nameController,
-                inputType: TextInputType.number,
+                inputType: TextInputType.text,
               ),
             ),
           ],
@@ -132,7 +130,7 @@ class _POSTMethodTileState extends State<POSTMethodTile> {
               flex: 3,
               child: DataInputField(
                 controller: _emailController,
-                inputType: TextInputType.number,
+                inputType: TextInputType.emailAddress,
               ),
             ),
           ],
