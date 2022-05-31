@@ -10,9 +10,9 @@ This project shows -
 - how to work with interceptors and logger for better logging purposes.
 - how to connect UI using FutureBuilder for asynchronous methods.
 
-<!-- ### Read the article [here on Medium](https://medium.com/@thecodexhubofficial/flutter-sqlite-database-persist-data-with-sqflite-74283c51b9a2).
+### Read the article [here on Medium](https://medium.com/@thecodexhubofficial/dio-package-in-flutter-http-requests-and-interceptors-2c3d6ef3e9a3).
 
-### Check the sample video [here on Instagram](https://www.instagram.com/p/CXwDnyZjyGx/?utm_source=ig_web_copy_link). -->
+<!-- ### Check the sample video [here on Instagram](https://www.instagram.com/p/CXwDnyZjyGx/?utm_source=ig_web_copy_link). -->
 
 ## Preview
 
